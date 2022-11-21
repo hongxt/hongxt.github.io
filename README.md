@@ -1,4 +1,4 @@
-# 一个菜鸡的技术日记 TvT
+# 技术日记  
 ## ubuntu免卸载安装cmake实现多版本共存方法-2022.11.21
 （1）	下载源码  
 https://cmake.org/download/  
@@ -42,7 +42,7 @@ ubuntu自带有proj（gdal的依赖）和gdal，但是版本较低，删除升�
 5.完事  
  安装在了/usr/local里面的include和lib中
 
-# 一个俗人的人生感言
+# 人生感言  
 ## 关于学习  
 吾生也有涯，而知也无涯，以有涯随无涯，殆矣
 
