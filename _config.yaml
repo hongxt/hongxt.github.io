@@ -1,3 +1,6 @@
-theme: Architect
-title: [一个菜鸡的日记]
-description: [日常的技术笔记和感想]
+remote_theme: pages-themes/architect@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+
+title: [一个技术日记]
+description: [争取技术日记大于感想的博客]
