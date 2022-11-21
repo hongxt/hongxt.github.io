@@ -21,7 +21,7 @@ sudo update-alternatives --config cmake
 
 ## ubuntu18.04配置gdal高版本-2022.11.21
 ubuntu自带有proj（gdal的依赖）和gdal，但是版本较低，删除升级的时候，会牵扯到ros，下面提供一种不影响ros的方法  
-下载proj和gdal的release文件进行编译安装
+下载proj和gdal的release文件进行编译安装  
 1.安装sqlite3  
  sudo apt install sqlite3  
 2.proj  
