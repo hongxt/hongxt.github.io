@@ -1,6 +1,6 @@
 # 技术日记  
 网址:https://hongxt.github.io
-# ubuntu免卸载安装cmake实现多版本共存方法-2022.11.21
+## 1.ubuntu免卸载安装cmake实现多版本共存方法-2022.11.21
 （1）	下载源码  
 https://cmake.org/download/  
 （2）	解压运行  
@@ -20,7 +20,7 @@ sudo update-alternatives --install /usr/bin/cmake cmake /home/hongxt/tools/cmake
 （6）	查看cmake的配置  
 sudo update-alternatives --config cmake  
 
-# ubuntu18.04配置gdal高版本-2022.11.21
+## 2.ubuntu18.04配置gdal高版本-2022.11.21
 ubuntu自带有proj（gdal的依赖）和gdal，但是版本较低，删除升级的时候，会牵扯到ros，下面提供一种不影响ros的方法  
 下载proj和gdal的release文件进行编译安装  
 1.安装sqlite3  
@@ -32,6 +32,8 @@ ubuntu自带有proj（gdal的依赖）和gdal，但是版本较低，删除升�
  cmake ..  
  make -j8  
  sudo make install  
+ 设置路径
+ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib  
 <font color=red>3.删除原来的gdal  </font>  
  sudo rm -rf /usr/share/gdal/*  
  sudo rm -rf /usr/include/gdal/*  
