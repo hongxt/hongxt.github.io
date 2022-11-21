@@ -1,5 +1,5 @@
 # 技术日记  
-网址：hongxt.github.io
+网址：<hongxt.github.io>
 ## ubuntu免卸载安装cmake实现多版本共存方法-2022.11.21
 （1）	下载源码  
 https://cmake.org/download/  
