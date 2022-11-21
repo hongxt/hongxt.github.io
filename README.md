@@ -1,5 +1,5 @@
 # hongxt.github.io
-4.	基本流程  
+## ubuntu免卸载安装cmake实现多版本共存方法
 （1）	下载源码  
 https://cmake.org/download/  
 （2）	解压运行  
@@ -17,3 +17,4 @@ sudo make install DESTDIR=/home/hongxt/tools/cmake3.25
 （5）	使用update-alternatives进行安装  
 sudo update-alternatives --install /usr/bin/cmake cmake /home/hongxt/tools/cmake3.25/usr/local/bin/cmake 30  
 （6）	查看cmake的配置  
+sudo update-alternatives --config cmake  
