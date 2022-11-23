@@ -65,6 +65,17 @@ end = clock();   //结束时间
 cout<<"time = "<<double(end-start)/CLOCKS_PER_SEC<<"s"<<endl;  //输出时间（单位：ｓ）
 }
 ```
+
+## 4. snap、apt和apt-get
+
+
+## 5.vscode配置编辑器的include路径
+
+## 6.ubuntu的终端和github设置proxy
+
+
+
+
 # 关于学习  
 吾生也有涯，而知也无涯，以有涯随无涯，殆矣
 
