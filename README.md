@@ -19,6 +19,7 @@ sudo make install DESTDIR=/home/hongxt/tools/cmake3.25
 sudo update-alternatives --install /usr/bin/cmake cmake /home/hongxt/tools/cmake3.25/usr/local/bin/cmake 30  
 （6）	查看cmake的配置  
 sudo update-alternatives --config cmake  
+ubuntu软件更新会导致/usr/bin/重新出现cmake可执行文件，破坏掉链接，可以再次修改cmake可执行文件的名字即可
 
 ## 2.ubuntu18.04配置gdal高版本-2022.11.21
 ubuntu自带有proj（gdal的依赖）和gdal，但是版本较低，删除升级的时候，会牵扯到ros，下面提供一种不影响ros的方法  
