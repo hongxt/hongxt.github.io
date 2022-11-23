@@ -68,7 +68,6 @@ cout<<"time = "<<double(end-start)/CLOCKS_PER_SEC<<"s"<<endl;  //输出时间（
 
 ## 4. snap、apt和apt-get
 
-
 ## 5.vscode配置编辑器的include路径
 
 ## 6.ubuntu的终端和github设置proxy
