@@ -67,13 +67,74 @@ cout<<"time = "<<double(end-start)/CLOCKS_PER_SEC<<"s"<<endl;  //输出时间（
 ```
 
 ## 4. snap、apt和apt-get
+| 项目   | Apt                             | Snap                                       |
+|------|---------------------------------|--------------------------------------------|
+| 特点   | Apt中找不到的软件需要PPA安装。              | 软件运行更加安全                                   |
+|      | 对与.deb后缀的包，双击可安装，dpkg安装。        | 独立和更加易控的版本                                 |
+|      | deb 不是特别安全，安装授权后可以访问系统任何位置。     | 软件互不干预                                     |
+|      | 多个软件可共享一个类库。                    | 易于打包软件和发行                                  |
+|      | 仅支持deb系的Linux                   | 自动升级，你安装的软件永远都是最新的                         |
+|      |                                 | 支持大量的Linux发行版                              |
+|      |                                 | 易于版本回滚和改变。容易构建软件项目。同时支持开源和闭源软件发行。Snaps更加安全 |
+| 常用命令 | 更新源                             | snap安装软件                                   |
+|      | sudo apt update                 | sudo snap install firefox                  |
+|      | 更新已经安装的软件                       | 列出安装的软件                                    |
+|      | sudo apt upgrade                | snap list                                  |
+|      | 安装软件                            | 搜索软件                                       |
+|      | sudo apt install firefox        | snap find                                  |
+|      | 移除软件                            | 更新软件                                       |
+|      | sudo apt remove firefox         | sudo snap refresh firefox                  |
+|      | # 删除并清除配置文件                     | # 更新全部                                     |
+|      | sudo apt --purge remove firefox | sudo snap refresh all                      |
+|      | 清理安装包                           | 卸载软件                                       |
+|      | sudo apt autoclean              | snap remove firefox                        |
+|      | #清理所有安装包                        |                                            |
+|      | sudo apt clean                  |                                            |
+|      | 搜索软件                            |                                            |
+|      | apt search firefox              |                                            |
+|      | 列出已安装的                          |                                            |
+|      | apt list –installed             |                                            |
+|      | 卸载多余依赖                          |                                            |
+|      | sudo apt autoremove             |                                            |
 
 ## 5.vscode配置编辑器的include路径
-
+点击左边扩展栏图标—>搜索C/C++ -> 安装->Reload  
+安装完成之后，打开你的包含c++的文件夹，将会生成一个.vscode文件夹，所有的配置将在这个文件夹中进行配置。  
+扩展程序会根据当前系统环境配置基本信息，因此有可能配置不完整，这时需要通过生成c_cpp_properties.json文件来配置缺少的信息  
+ctrl+shift+P打开Command Palette,运行C/Cpp: Edit configurations...生成c_cpp_properties.json：  
+进行设置路径即可  
 ## 6.ubuntu的终端和github设置proxy
+A.ubuntu设置终端代理和清除代理命令（命令行测试与设置是同步的）  
+1.添加代理  
+```shell
+export http_proxy=http://proxyAddress:port  
+export https_proxy=http://proxyAddress:port  
+```  
+2.查看代理  
+```shell
+env |grep -i proxy  
+```
+3.清除代理  
+```shell
+unset http_proxy  
+unset https_proxy  
+```
 
-
-
+B. 设置github代理  
+1.查看git配置  
+```shell
+git config -l  
+```
+2.一共两个协议，两种不同的协议对应后面不同的后缀名与当前的代理端口  
+```shell
+git config --global https.proxy https://127.0.0.1:12333  
+git config --global http.proxy http://127.0.0.1:12333  
+```
+3.取消代理  
+```shell
+git config --global --unset http.proxy  
+git config --global --unset https.proxy  
+```
 
 # 关于学习  
 吾生也有涯，而知也无涯，以有涯随无涯，殆矣
