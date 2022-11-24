@@ -134,7 +134,17 @@ git config --global http.proxy http://127.0.0.1:12333
 ```shell
 git config --global --unset http.proxy  
 git config --global --unset https.proxy  
-```
+```  
+
+## 6. c++向文件读写数据  
+
+## 7. python从文件读取数据，画三维图像  
+
+## 8. ubuntu18.04配置python环境  
+
+## 9. 安装ubuntu20.04过程  
+
+
 
 # 关于学习  
 吾生也有涯，而知也无涯，以有涯随无涯，殆矣
