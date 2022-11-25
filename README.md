@@ -137,6 +137,7 @@ git config --global --unset https.proxy
 ```  
 
 ## 6. c++向文件读写数据  
+![avatar](/pics/apt_snap_contrast.PNG)
 
 ## 7. python从文件读取数据，画三维图像  
 
