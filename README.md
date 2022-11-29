@@ -67,35 +67,7 @@ cout<<"time = "<<double(end-start)/CLOCKS_PER_SEC<<"s"<<endl;  //输出时间（
 ```
 
 ## 4. snap、apt和apt-get
-| 项目   | Apt                             | Snap                                       |
-|------|---------------------------------|--------------------------------------------|
-| 特点   | Apt中找不到的软件需要PPA安装。              | 软件运行更加安全                                   |
-|      | 对与.deb后缀的包，双击可安装，dpkg安装。        | 独立和更加易控的版本                                 |
-|      | deb 不是特别安全，安装授权后可以访问系统任何位置。     | 软件互不干预                                     |
-|      | 多个软件可共享一个类库。                    | 易于打包软件和发行                                  |
-|      | 仅支持deb系的Linux                   | 自动升级，你安装的软件永远都是最新的                         |
-|      |                                 | 支持大量的Linux发行版                              |
-|      |                                 | 易于版本回滚和改变。容易构建软件项目。同时支持开源和闭源软件发行。Snaps更加安全 |
-| 常用命令 | 更新源                             | snap安装软件                                   |
-|      | sudo apt update                 | sudo snap install firefox                  |
-|      | 更新已经安装的软件                       | 列出安装的软件                                    |
-|      | sudo apt upgrade                | snap list                                  |
-|      | 安装软件                            | 搜索软件                                       |
-|      | sudo apt install firefox        | snap find                                  |
-|      | 移除软件                            | 更新软件                                       |
-|      | sudo apt remove firefox         | sudo snap refresh firefox                  |
-|      | # 删除并清除配置文件                     | # 更新全部                                     |
-|      | sudo apt --purge remove firefox | sudo snap refresh all                      |
-|      | 清理安装包                           | 卸载软件                                       |
-|      | sudo apt autoclean              | snap remove firefox                        |
-|      | #清理所有安装包                        |                                            |
-|      | sudo apt clean                  |                                            |
-|      | 搜索软件                            |                                            |
-|      | apt search firefox              |                                            |
-|      | 列出已安装的                          |                                            |
-|      | apt list –installed             |                                            |
-|      | 卸载多余依赖                          |                                            |
-|      | sudo apt autoremove             |                                            |
+![avatar](/pics/apt_snap_contrast.PNG)
 
 ## 5.vscode配置编辑器的include路径
 点击左边扩展栏图标—>搜索C/C++ -> 安装->Reload  
@@ -137,9 +109,87 @@ git config --global --unset https.proxy
 ```  
 
 ## 6. c++向文件读写数据  
-![avatar](/pics/apt_snap_contrast.PNG)
+```c++
+#include <fstream>
+using namespace std;
+void fwrite_path(vector<Vector3i> path){
+    ofstream outfile;
+    outfile.open("../scripts/path.txt");
+    int value=1;
+    for (size_t i = 0; i < path.size(); i++)
+    {
+        // id x y z value
+        outfile<<i<<" "<<path[i](0)<<" "<<path[i](1)<<" "<<path[i](2)<<" "<<value<<endl;
+    }
+    outfile.close();
+}
+
+```  
 
 ## 7. python从文件读取数据，画三维图像  
+```python
+#!/usr/bin/env python3
+import sys
+from matplotlib import pyplot as plt
+import numpy as np  # 用来处理数据
+from mpl_toolkits.mplot3d import Axes3D
+
+##读取path的数值
+ID=[]
+PX=[]
+PY=[]
+PZ=[]
+VALUE=[]
+filename = './path.txt'
+with open(filename, 'r') as f:
+    lines = f.readlines()
+    for line in lines:
+        try:
+            temp=line.split(' ')
+            # print(temp[0])
+            ID.append(int(temp[0]))
+            PX.append(int(temp[1]))
+            PY.append(int(temp[2]))
+            PZ.append(int(temp[3]))
+            VALUE.append(int(temp[4]))
+        except:
+            continue
+
+##读取map的数值
+MX=[]
+MY=[]
+MZ=[]
+filename = './map.txt'
+with open(filename, 'r') as f:
+    lines = f.readlines()
+    for line in lines:
+        try:
+            temp=line.split(' ')
+            # print(temp[0])
+            MX.append(int(temp[1]))
+            MY.append(int(temp[2]))
+            MZ.append(int(temp[3]))
+        except:
+            continue
+
+
+fig=plt.figure()
+ax=Axes3D(fig)
+# ax.scatter(PX,PY,PZ,s=20,c='g',marker='s')
+# ax.plot3D(PX,PY,PZ,linewidth=10,c='r')
+# ax.scatter(MX,MY,MZ,c='r')
+ax.bar3d(MX,MY,MZ,10,10,1,alpha=0.5)
+ax.bar3d(PX,PY,PZ,10,10,1,alpha=0.5)
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+ax.set_xlim([-150,400])
+ax.set_ylim([-150,400])
+# plt.savefig('com.jpg')
+plt.gca().set_box_aspect((550, 550, 50))  # 当x、y、z轴范围之比为3:5:2时。
+plt.show()
+```
 
 ## 8. ubuntu18.04配置python环境  
 
