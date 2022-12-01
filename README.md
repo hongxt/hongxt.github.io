@@ -192,7 +192,26 @@ plt.show()
 ```
 
 ## 8. ubuntu18.04配置python环境  
-
+目的是替代掉系统自带的python3，实现安装px4最新版本的时候很方便  
+1下载安装的sh文件  
+https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/  
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/  
+2复制到虚拟机中，在终端运行  
+```shell
+bash Anaconda3-2022.10-Linux-x86_64.sh
+```
+同意安装   
+同意协议    
+同意安装位置   
+同意写入bashrc文件 <font color=red>【no】</font>    
+3使用update-alternatives进行配置    
+```shell
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 20
+sudo update-alternatives --install /usr/bin/python python /home/hongxt/anaconda3/bin/python 30
+sudo update-alternatives --config python
+```
+4配置python3  
+除了上面配置python的环境，系统里面的python,python2,python3都是链接的形式，因此可以一样的方法为python3配置可以切换的多环境并存  
 ## 9. 安装ubuntu20.04过程  
 
 
