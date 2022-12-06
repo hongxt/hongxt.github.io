@@ -1,25 +1,6 @@
 # 技术日记  
 网址:https://hongxt.github.io  
-## 1.ubuntu免卸载安装cmake实现多版本共存方法-2022.11.21
-（1）	下载源码  
-https://cmake.org/download/  
-（2）	解压运行  
-./bootstrap  
-（2.1）另起终端，将原来的cmake改名cmake3.10，建立到update-alternatives中看看行不行，避免后续名字冲突  
-cd /usr/bin/  
-mv cmake cmake3.10  
-sudo update-alternatives --install /usr/bin/cmake cmake /usr/bin/cmake3.10 10  
-sudo update-alternatives --config cmake  
-cmake --version  
-（3）	编译构建  
-make  
-（4）	安装到指定自定义位置（注意路径不能有空格）  
-sudo make install DESTDIR=/home/hongxt/tools/cmake3.25  
-（5）	使用update-alternatives进行安装  
-sudo update-alternatives --install /usr/bin/cmake cmake /home/hongxt/tools/cmake3.25/usr/local/bin/cmake 30  
-（6）	查看cmake的配置  
-sudo update-alternatives --config cmake  
-ubuntu软件更新会导致/usr/bin/重新出现cmake可执行文件，破坏掉链接，可以再次修改cmake可执行文件的名字即可
+## [1.ubuntu免卸载安装cmake实现多版本共存方法-2022.11.21](https://github.com/hongxt/hongxt.github.io/issues/1)
 
 ## 2.ubuntu18.04配置gdal高版本-2022.11.21
 ubuntu自带有proj（gdal的依赖）和gdal，但是版本较低，删除升级的时候，会牵扯到ros，下面提供一种不影响ros的方法  
