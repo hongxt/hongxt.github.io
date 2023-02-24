@@ -9,7 +9,7 @@
 ## [7. c++向文件读写数据](https://github.com/hongxt/hongxt.github.io/issues/7)
 ## [8. python从文件读取数据，画三维图像](https://github.com/hongxt/hongxt.github.io/issues/8)
 ## [9. ubuntu18.04配置python环境](https://github.com/hongxt/hongxt.github.io/issues/9)
-## 10. 安装ubuntu20.04过程  
+## [10.CMakeLists.txt文件 ](https://github.com/hongxt/hongxt.github.io/issues/10)
 
 
 
