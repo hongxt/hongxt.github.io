@@ -12,6 +12,7 @@
 ## [10.CMakeLists.txt文件 ](https://github.com/hongxt/hongxt.github.io/issues/10)
 
 ## 11. ubuntu20.04安装
+## [12.visual stdio使用方法总结  ](https://github.com/hongxt/hongxt.github.io/issues/12)
 
 # 关于学习  
 吾生也有涯，而知也无涯，以有涯随无涯，殆矣
