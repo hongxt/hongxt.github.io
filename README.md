@@ -11,7 +11,7 @@
 ## [9. ubuntu18.04配置python环境](https://github.com/hongxt/hongxt.github.io/issues/9)
 ## [10.CMakeLists.txt文件 ](https://github.com/hongxt/hongxt.github.io/issues/10)
 
-## 11. ubuntu20.04安装
+##  [11.ubuntu常用指令和功能](https://github.com/hongxt/hongxt.github.io/issues/11)
 ## [12.visual stdio使用方法总结  ](https://github.com/hongxt/hongxt.github.io/issues/12)
 
 # 关于学习  
