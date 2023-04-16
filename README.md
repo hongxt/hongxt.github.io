@@ -13,7 +13,7 @@
 
 ##  [11.ubuntu常用指令和功能](https://github.com/hongxt/hongxt.github.io/issues/11)
 ## [12.visual stdio使用方法总结  ](https://github.com/hongxt/hongxt.github.io/issues/12)
-
+## [13. ubuntu下采用clash科学上网](https://github.com/hongxt/hongxt.github.io/issues/13)
 # 关于学习  
 吾生也有涯，而知也无涯，以有涯随无涯，殆矣
 
