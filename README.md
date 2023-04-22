@@ -1,5 +1,7 @@
 # 技术日记  
 网址:https://hongxt.github.io  
+
+## [操作系统相关](https://github.com/hongxt/hongxt.github.io/blob/main/mymd/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3.md)
 ## [1.ubuntu免卸载安装cmake实现多版本共存方法-2022.11.21](https://github.com/hongxt/hongxt.github.io/issues/1)
 ## [2.ubuntu18.04配置gdal高版本-2022.11.21](https://github.com/hongxt/hongxt.github.io/issues/2)
 ## [3.c++计时函数](https://github.com/hongxt/hongxt.github.io/issues/3)
