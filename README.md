@@ -4,7 +4,7 @@
 ## [2.ubuntu18.04配置gdal高版本-2022.11.21](https://github.com/hongxt/hongxt.github.io/issues/2)
 ## [3.c++计时函数](https://github.com/hongxt/hongxt.github.io/issues/3)
 ## [4. snap、apt和apt-get](https://github.com/hongxt/hongxt.github.io/issues/4)
-## [5.vscode配置编辑器的include路径](https://github.com/hongxt/hongxt.github.io/issues/5)
+## [5.vscode软件相关的设置](https://github.com/hongxt/hongxt.github.io/issues/5)
 ## [6.ubuntu的终端和github设置proxy](https://github.com/hongxt/hongxt.github.io/issues/6)
 ## [7. c++向文件读写数据](https://github.com/hongxt/hongxt.github.io/issues/7)
 ## [8. python从文件读取数据，画三维图像](https://github.com/hongxt/hongxt.github.io/issues/8)
