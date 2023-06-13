@@ -38,3 +38,7 @@ void fwrite_path(vector<Vector3i> path){
 }
 ```
 
+# 3 线程锁的使用
+
+## 3.1 
+
