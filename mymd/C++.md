@@ -139,7 +139,7 @@ int main(int argc, char** argv) {
 
 ### 3.2.1 使用lock_guard
 
-lock_guard的作用域是局部的，最好采用{}进行选中
+lock_guard的作用域是局部的，最好采用{}进行选中，方便进行改变后自动解锁
 
 ```c++
 void set_flag(int change_hz) {
