@@ -18,6 +18,8 @@
 使用Docker快速安装：https://www.yuque.com/xtdrone/manual_cn/docker
 
 仿真器环境及无人机参数：点击下载
+https://zhihangcup.chilunyc.com/doc/%E4%BB%BF%E7%9C%9F%E5%99%A8%E7%8E%AF%E5%A2%83%E5%8F%8A%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%8F%82%E6%95%B0.pdf
+
 
 比赛环境启动说明：https://www.yuque.com/xtdrone/manual_cn/zhihangcup
 # 评分说明
