@@ -63,3 +63,35 @@ Score=40-3.6×（t-10） 10＜t≤20
 
 （12）科目1评分表
 ![Alt text](image-3.png)
+# 1 系统运行
+## 1.1 无人机命令行起飞
+### 1.1.1 位置点发布（终端1）
+发布位置订阅，防止offborad模式的失效
+```
+rostopic pub -r 20 mavros/setpoint_position/local geometry_msgs/PoseStamped "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+pose:
+  position:
+    x: 0.0
+    y: 0.0
+    z: 1.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0" 
+```
+### 1.1.2 切换offboard模式和解锁（终端2）
+首先运行
+```
+rosservice call /mavros/set_mode "base_mode: 0
+custom_mode: 'OFFBOARD'" 
+```
+随后运行
+```
+rosservice call /mavros/cmd/arming "value: 1"
+```
