@@ -104,4 +104,38 @@ roslaunch px4 zhihang1.launch
 ```
 roslaunch px4 zhihang2.launch
 ```
+# 2 港科大集群探索代码
+## 2.1 启动的方法
+rviz的启动
+```
+ source devel/setup.bash && roslaunch exploration_manager rviz.launch
+ ```
+启动算法的节点
+```
+source devel/setup.bash && roslaunch exploration_manager exploration.launch
+```
+## 2.2 launch文件的阅读
+exploration.launch文件的解析
 
+1.首先include了一个algorithm.xml文件，其中启动的是exploration_manager包里面的，exploration_node节点，重命名的名字是exploration_node；
+
+2.启动了plan_manage包中的traj_server节点；
+
+3.启动了waypoint_generator包中的waypoint_generator节点；
+
+4.include了一个simulator.xml文件，
+
+(a)其中启动的是map_generator包中的map_pub节点；
+
+(b)so3_quadrotor_simulator包中的quadrotor_simulator_so3节点；
+
+(c)nodelet包中的nodelet重命名为so3_control；
+
+(d)so3_disturbance_generator包中的so3_disturbance_generator
+
+(e)odom_visualization包中的odom_visualization
+
+(f)local_sensing_node包中的pcl_render_node
+
+## 2.3 waypoint_generator节点
+订阅了odom话题，调用的是回调函数odom_callback，
