@@ -95,3 +95,13 @@ custom_mode: 'OFFBOARD'"
 ```
 rosservice call /mavros/cmd/arming "value: 1"
 ```
+### 1.1.3 启动智航仿真系统
+启动仿真1
+```
+roslaunch px4 zhihang1.launch
+```
+启动仿真2
+```
+roslaunch px4 zhihang2.launch
+```
+
