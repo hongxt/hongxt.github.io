@@ -165,3 +165,33 @@ exploration.launch文件的解析
 18 18.1,0,2
 19 18.1,-1.75,0
 ```
+### 3.1.2 基于最短路径的轨迹生成流程
+基本思路是
+```mermaid
+graph
+A[三维路径点获取] --> B[生成三维的B样条]
+B --> C[生成每个点的偏航角]
+C -->D[附带上时间戳]
+D --> E[输出给px4]
+```
+### 3.1.3 px4对位置点和偏航角接口
+1.设置位置点和偏航角的接口
+```c++
+geometry_msgs::PoseStamped pose;
+pose.pose.position.x = 2;
+pose.pose.position.y = 2;
+pose.pose.position.z = 2;
+tf::Quaternion q = tf::createQuaternionFromRPY(0, 0, yaw);
+pose.pose.orientation.x = q.x();
+pose.pose.orientation.y = q.y();
+pose.pose.orientation.z = q.z();
+pose.pose.orientation.w = q.w();
+```
+### 3.1.4 生成三维的B样条
+
+### 3.1.5 生成每个点的偏航角
+
+### 3.1.6 附带上时间戳
+
+### 3.1.7 输出给px4
+如何将轨迹点基于时间信息传输给px4
