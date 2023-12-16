@@ -33,6 +33,7 @@ void fwrite_path(vector<Vector3i> path){
     {
         // id x y z value
         outfile<<i<<" "<<path[i](0)<<" "<<path[i](1)<<" "<<path[i](2)<<" "<<value<<endl;
+        outfile.flush();
     }
     outfile.close();
 }
