@@ -63,3 +63,10 @@ file_to_copy是需要拷贝的文件
 
 ${CMAKE_SOURCE_DIR}/../../xxfds/xfdzz_1/build/是放置的路径
 
+## 3.2 拷贝文件
+
+```cmake
+file(COPY ${CMAKE_SOURCE_DIR}/xmlconfig/EquipmentConfigNet.xml DESTINATION ${CMAKE_SOURCE_DIR}/../../xxfds/xfdzz_1/xmlconfig/)
+```
+
+将文件从某处拷贝到某处
