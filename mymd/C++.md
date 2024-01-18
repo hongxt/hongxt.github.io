@@ -192,5 +192,3 @@ void print_flag(int dayin_hz) {
 
 
 
-
-

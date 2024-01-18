@@ -45,3 +45,21 @@ add_executable (<name> [WIN32] [MACOSX_BUNDLE]
 add_definitions(-DLIBEVENT_VERSION_NUMBER=0x02010800)
 #define LIBEVENT_VERSION_NUMBER 0x02010800
 ```
+
+# 3 拷贝文件到文件夹
+
+## 3.1 编译后进行拷贝
+
+```cmake
+add_custom_command(
+   TARGET file_to_copy POST_BUILD
+   COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:file_to_copy> ${CMAKE_SOURCE_DIR}/../../xxfds/xfdzz_1/build/
+)
+```
+
+其中
+
+file_to_copy是需要拷贝的文件
+
+${CMAKE_SOURCE_DIR}/../../xxfds/xfdzz_1/build/是放置的路径
+
