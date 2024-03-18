@@ -76,5 +76,11 @@ plt.show()
 python -m pip install jsbsim
 ```
 
+查看当前pip是隶属于谁，可以通过下面命令进行查看
+
+```bash
+pip -V
+```
+
 
 
