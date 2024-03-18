@@ -64,3 +64,17 @@ plt.gca().set_box_aspect((550, 550, 50))  # 当x、y、z轴范围之比为3:5:2�
 plt.show()
 ```
 
+# 2 关于pip和python
+
+命令行中切换python环境以后，pip并没有随之切换。
+
+例如原来是python3.8的环境，此时切换到python3.11，安装了个jsbsim，但是运行文件发现找不到，就是因为pip是和python3.8绑定的，安装的包安装到了3.8中，3.11是看不见的。
+
+最好的方法是使用下述命令进行安装，这样安装的位置是当前python环境的位置
+
+```bash
+python -m pip install jsbsim
+```
+
+
+
