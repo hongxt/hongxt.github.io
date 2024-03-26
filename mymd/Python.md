@@ -82,5 +82,17 @@ python -m pip install jsbsim
 pip -V
 ```
 
+切换pip到对应的版本
+
+~/.bashrc
+
+中增加
+
+```bash
+export PATH="/path/to/python3.11/bin:$PATH"
+```
+
+实现pip和pip3对应到当前的python版本
+
 
 
